@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>signIn</title>
+  </head>
+  <body>
+    <!-- navbr -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> WeCare </a>
+
+        <div class="d-flex float-end mt-2">
+          <!-- <button type="button" class="btn btn-outline-primary me-1">
+            Profile
+          </button> -->
+          <button
+            type="button"
+            class="btn btn-outline-warning me-1"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal"
+          >
+            Signin
+          </button>
+          <button type="button" class="btn btn-outline-warning me-1">
+            SignUp
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- end of navbar -->
+    <div class="container">
+      <div class="row mt-5 px-16">
+        <div class="col"></div>
+        <div class="col border-2 border-black-300 rounded-tl-lg p-8">
+          <div class="mb-3 text-center">
+            <p class="h4 mb-2 text-success">Sign In</p>
+            <img
+              src="login.png"
+              alt=""
+              class="rounded-circle mx-auto d-block"
+              width="30%"
+              srcset=""
+            />
+          </div>
+          <div id="success" class="alert alert-success d-none">
+            <strong>Success!</strong> Login
+          </div>
+          <div id="failed" class="alert alert-danger d-none">
+            <strong>failed!</strong> wrong username or password
+          </div>
+          <div id="warning" class="alert alert-warning d-none">
+            <strong>warning!</strong> username or password must have atleast 5
+            charcter
+          </div>
+          <form action="" name="loginForm" onsubmit="return validateForm()">
+            <div class="mb-2">
+              <label for="username" class="form-label">Username:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+              />
+            </div>
+            <div class="mb-2">
+              <label for="pwd" class="form-label">Pssword:</label>
+              <input
+                type="password"
+                name="password"
+                id="pwd"
+                class="form-control"
+                placeholder="Enter password"
+              />
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-outline-success px-48">
+                SignIn
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <script>
+      function validateForm() {
+        let username = document.forms["loginForm"]["username"].value;
+        let password = document.forms["loginForm"]["password"].value;
+        let success = document.getElementById("success");
+        let failed = document.getElementById("failed");
+        let warning = document.getElementById("warning");
+        if (username === "ramadhani" && password === "ramadhani") {
+          success.classList.remove("d-none");
+          failed.classList.add("d-none");
+          warning.classList.add("d-none");
+          return false;
+        } else if (username.length < 4 || password.length < 4) {
+          success.classList.add("d-none");
+          failed.classList.add("d-none");
+          warning.classList.remove("d-none");
+          return false;
+        } else {
+          success.classList.add("d-none");
+          failed.classList.remove("d-none");
+          warning.classList.add("d-none");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

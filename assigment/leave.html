@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Employee Leave</title>
+  </head>
+  <body>
+    <!-- nava bar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="Employee Calender" style="width: 100px" />
+        </a>
+
+        <div class="d-flex float-end mt-2">
+          <button type="button" class="btn btn-outline-primary me-1">
+            Profile
+          </button>
+
+          <button type="button" class="btn btn-outline-primary me-1">
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid mt-8">
+      <p class="h3 divide-y-4 text-info">Employee Leave Dashboard</p>
+
+      <div class="grid grid-cols-5">
+        <div
+          class="bg-yellow-400 w-30 h-24 justify-content-center text-center outline outline-offset-2"
+        >
+          <p class="h3">Annual Leave</p>
+          <p class="h1">10</p>
+        </div>
+        <div class="bg-red-400 w-30 h-24 justify-content-center text-center">
+          <p class="h3">Sick Leave</p>
+          <p class="h1">10</p>
+        </div>
+        <div class="bg-green-400 w-30 h-24 justify-content-center text-center">
+          <p class="h3">Parental Leave</p>
+          <p class="h1">7</p>
+        </div>
+        <div class="bg-blue-400 w-30 h-24 justify-content-center text-center">
+          <p class="h3">Maternity Leave</p>
+          <p class="h1">12</p>
+        </div>
+        <div class="bg-gray-400 w-30 h-24 justify-content-center text-center">
+          <p class="h3">Unpaid Leave</p>
+          <p class="h1">9</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-16">
+      <div class="row mx-4">
+        <div class="col-sm-4 mx-4 bg-gray-100">
+          <p class="h5">Apply for Leave</p>
+          <hr />
+          <form action="" class="mt-4">
+            <div class="row mx-auto">
+              <div class="col">
+                <label for="typ" class="form-label">Leave Type</label>
+                <select
+                  name="leave-type"
+                  id="typ"
+                  class="form-control appearance-none"
+                >
+                  <option>Annual Leave</option>
+                  <option>Sick Leave</option>
+                  <option>Parental Leave</option>
+                  <option>Maternity Leave</option>
+                  <option>Unpaid Leave</option>
+                </select>
+              </div>
+
+              <div class="col">
+                <label for="frm" class="form-label">From</label>
+                <input type="date" name="from" id="frm" class="form-control" />
+              </div>
+              <div class="col">
+                <label for="to" class="form-label">From</label>
+                <input type="date" name="to" id="to" class="form-control" />
+              </div>
+            </div>
+            <div class="row mx-auto">
+              <div class="col mt-4">
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    id="comment"
+                    name="text"
+                    placeholder="Comment goes here"
+                  ></textarea>
+                  <label for="comment">Reason for leaves</label>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn btn-outline-success mt-8 mb-8 float-end"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+      </div>
+    </div>
+  </body>
+</html>
