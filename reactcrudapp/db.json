@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "name": "Juma Khamisi Omary",
+      "email": "juma@gmail.com",
+      "rollno": 3452800822,
+      "id": "cc7a"
+    },
+    {
+      "id": "97dc",
+      "name": "Ramadhani",
+      "email": "wwewe@gmail.com",
+      "rollno": 789078
+    },
+    {
+      "name": "Sudaksha",
+      "email": "rsadik99@gmail.com",
+      "rollno": 44546576,
+      "id": "094e"
+    }
+  ]
+}
