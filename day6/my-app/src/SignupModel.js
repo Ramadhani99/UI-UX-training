@@ -42,7 +42,7 @@ function SignupModel() {
                 SignUp as a Coach
               </button>
             </Link>
-            <Link to="/register">
+            <Link to="/registerUser">
               <button
                 type="button"
                 className="btn btn-outline-success  m-3"

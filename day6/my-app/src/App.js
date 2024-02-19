@@ -8,6 +8,7 @@ import ManagerDashboard from "./ManagerDashboard";
 import Home from "./Home";
 import Crud from "./Crud";
 import FilterTable from "./Filter/FilterTable";
+import RegisterUser from "./RegisterUser";
 
 import { Routes, Link, Route } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/quiz" element={<ManagerDashboard />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/registerUser" element={<RegisterUser />} />
         <Route path="/crud" element={<Crud />} />
         <Route path="/filter" element={<FilterTable />} />
       </Routes>

@@ -5,10 +5,12 @@ import Button from "./Button";
 function Home() {
   return (
     <div className="text-center m-4">
-      <p class="h1 text-orange-300">WE ARE AT THE HEART OF APPROPIATE CARE</p>
-      <hr />
       <div class="conatiner flex flex-row">
         <div className="flex-initial w-50">
+          <p class="h1 text-orange-300">
+            WE ARE AT THE <span className="text-danger">HEART</span> OF
+            APPROPIATE CARE
+          </p>
           <p class="h4 px-4">
             Wecare stands as a beacon of hope for those in need, providing a
             compassionate and understanding environment for individuals facing
