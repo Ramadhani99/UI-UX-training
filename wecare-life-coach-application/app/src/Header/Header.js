@@ -1,18 +1,20 @@
 import React from "react";
 import Button from "./Button";
-
+import { Link } from "react-router-dom";
+import Model from "./Model";
 function Header() {
   return (
     <div>
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <div class="container-fluid">
-          <Link to="/">
-            <button class="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div className="container-fluid">
+          <button className="navbar-brand" href="#">
+            <Link to="/">
               We<span className="text-success">Ca</span>
               <span className="text-info">re</span>
-            </button>
-          </Link>
-          <div class="d-flex float-end mt-2">
+            </Link>
+          </button>
+
+          <div className="d-flex float-end mt-2">
             <Button />
           </div>
         </div>

@@ -1,0 +1,65 @@
+.Card {
+  display: flex;
+  flex: 1 0 calc(33.3333% - 20px);
+  height: 10rem !important;
+  color: black;
+  border-radius: 0.7rem;
+  position: relative;
+  cursor: pointer;
+  padding: 1rem;
+}
+.Card:hover {
+  box-shadow: none !important;
+}
+
+.img-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  max-height: 100%; /* Set a maximum height for the image box */
+}
+
+.img-box > img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.img-box > span {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  text-overflow: ellipsis; /* Show an ellipsis (...) for overflowed text */
+  text-align: center;
+}
+
+.detail {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.detail > span:nth-child(1) {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.detail > span:nth-child(3) {
+  font-size: 12px;
+}
+.Cards {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.parentContainer {
+  width: calc(33.3333% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow added */
+  margin-bottom: 20px; /* Space between containers at the bottom */
+  padding: 15px !important; /* Padding added for better visualization of box shadow */
+}
